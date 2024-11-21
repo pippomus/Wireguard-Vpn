@@ -14,6 +14,30 @@ msgstr ""
 "X-Generator: Poedit 3.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
+msgid "SKIN, COLORS AND SOUNDS"
+msgstr "ΘΕΜΑ, ΧΡΩΜΑΤΑ ΚΑΙ ΗΧΟΙ"
+
+msgid "Choose a sound"
+msgstr "Επιλέξτε έναν ήχο"
+
+msgid "Play sound in enigma2"
+msgstr "Αναπαραγωγή ήχου στο enigma2"
+
+msgid "Play sound in enigma2 after exiting plugin"
+msgstr "Αναπαραγωγή ήχου στο enigma2 μετά την έξοδο από το πρόσθετο"
+
+msgid "(Experimental)"
+msgstr "(Πειραματικό)"
+
+msgid "The WireGuard package is not installed!"
+msgstr "Το πακέτο WireGuard δεν έχει εγκατασταθεί!"
+
+msgid "The WireGuard kernel module is not loaded!"
+msgstr "Η μονάδα kernel του WireGuard δεν έχει φορτωθεί!"
+
+msgid "The file /etc/wireguard/wg0.conf was not found!"
+msgstr "Το αρχείο /etc/wireguard/wg0.conf δεν βρέθηκε!"
+
 msgid "Click"
 msgstr "Κλικ"
 
@@ -70,9 +94,6 @@ msgstr "Πορτοκαλί"
 
 msgid "Grey"
 msgstr "Γκρι"
-
-msgid "SKIN AND COLORS ITEMS"
-msgstr "ΘΕΜΑ ΚΑΙ ΧΡΩΜΑΤΑ ΣΤΟΙΧΕΙΩΝ"
 
 msgid "Select the color of the entries."
 msgstr "Επιλέξτε το χρώμα των καταχωρήσεων."

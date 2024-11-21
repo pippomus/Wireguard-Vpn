@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: wireguard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-11-17 21:00+0200\n"
+"PO-Revision-Date: 2024-11-21 09:00+0200\n"
 "Last-Translator: airforce\n"
 "Language-Team: airforce <kosmosspace@gmail.com>\n"
 "Language: ru\n"
@@ -13,6 +13,30 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.4.4\n"
 "X-Poedit-SourceCharset: iso-8859-5\n"
+
+msgid "SKIN, COLORS AND SOUNDS"
+msgstr "СКИН, ЦВЕТА И ЗВУКИ"
+
+msgid "Choose a sound"
+msgstr "Выберите звук"
+
+msgid "Play sound in enigma2"
+msgstr "Воспроизвести звук в enigma2"
+
+msgid "Play sound in enigma2 after exiting plugin"
+msgstr "Воспроизвести звук в enigma2 после выхода из плагина"
+
+msgid "(Experimental)"
+msgstr "(Экспериментальный)"
+
+msgid "The WireGuard package is not installed!"
+msgstr "Пакет WireGuard не установлен!"
+
+msgid "The WireGuard kernel module is not loaded!"
+msgstr "Модуль ядра WireGuard не загружен!"
+
+msgid "The file /etc/wireguard/wg0.conf was not found!"
+msgstr "Файл /etc/wireguard/wg0.conf не найден!"
 
 msgid "Play sound"
 msgstr "Воспроизвести звук"
@@ -61,9 +85,6 @@ msgstr "Цвет меню"
 
 msgid "Color of sub entries"
 msgstr "Цвет текста"
-
-msgid "SKIN AND COLORS ITEMS"
-msgstr "ЭЛЕМЕНТЫ СКИНА И ЦВЕТА"
 
 msgid "Select the color of the entries."
 msgstr "Выберите цвет меню."
