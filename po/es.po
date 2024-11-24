@@ -14,6 +14,18 @@ msgstr ""
 "X-Generator: Poedit 3.0.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
+msgid "Ping servers"
+msgstr ""
+
+msgid "Ping all servers"
+msgstr ""
+
+msgid "Server selected"
+msgstr ""
+
+msgid "Select different ping options to show them in the list."
+msgstr ""
+
 msgid "SKIN, COLORS AND SOUNDS"
 msgstr ""
 
@@ -56,7 +68,7 @@ msgstr ""
 msgid "Play sound"
 msgstr ""
 
-msgid "Page: %d/%d"
+msgid "Page: %s%s%s"
 msgstr ""
 
 msgid "Do you want to import the backup file?"
@@ -787,8 +799,8 @@ msgstr "¡Clave privada guardada con éxito!"
 msgid "Load Private Key"
 msgstr "Cargar clave privada"
 
-msgid "Total servers: %d/%d"
-msgstr "Servidores totales: %d/%d"
+msgid "Total servers: %s%s%s"
+msgstr "Servidores totales: %s%s%s"
 
 msgid "Checking Wireguard module"
 msgstr "Comprobando el módulo Wireguard"

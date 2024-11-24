@@ -3,16 +3,89 @@ msgstr ""
 "Project-Id-Version: wireguard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-11-21 07:00+0100\n"
+"PO-Revision-Date: 2024-11-24 13:46+0100\n"
 "Last-Translator: Gruick1\n"
 "Language-Team: your_name <your_email@gmail.com>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 3.5\n"
-"X-Poedit-SourceCharset: iso-8859-15\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+msgid "Ping servers"
+msgstr "Test des serveurs"
+
+msgid "Ping all servers"
+msgstr "Test tous les serveurs"
+
+msgid "Server selected"
+msgstr "Serveur choisi"
+
+msgid "Select different ping options to show them in the list."
+msgstr "Sélectionnez les différentes options de test pour les afficher dans la liste."
+
+msgid "SKIN, COLORS AND SOUNDS"
+msgstr "THEME, LES COULEURS ET LES SONS"
+
+msgid "Choose a sound"
+msgstr "Choisir un son"
+
+msgid "Play sound in enigma2"
+msgstr "Jouer un son dans enigma2"
+
+msgid "Play sound in enigma2 after exiting plugin"
+msgstr "Jouer le son dans enigma2 après avoir quitté le plugin"
+
+msgid "(Experimental)"
+msgstr "(Expérimental)"
+
+msgid "The WireGuard package is not installed!"
+msgstr "Le paquet WireGuard n'est pas installé!"
+
+msgid "The WireGuard kernel module is not loaded!"
+msgstr "Le module du noyau WireGuard n'est pas chargé!"
+
+msgid "The file /etc/wireguard/wg0.conf was not found!"
+msgstr "Le fichier /etc/wireguard/wg0.conf n'a pas été trouvé!"
+
+msgid "Click"
+msgstr "Clic"
+
+msgid "Interface"
+msgstr "Interface"
+
+msgid "Button"
+msgstr "Bouton"
+
+msgid "Stop"
+msgstr "Arret"
+
+msgid "Disabled"
+msgstr "Désactiver"
+
+msgid "Play sound"
+msgstr "Jouer du son"
+
+msgid "Page: %s%s%s"
+msgstr "Page: %s%s%s"
+
+msgid "Do you want to import the backup file?"
+msgstr "Voulez-vous importer le fichier de sauvegarde ?"
+
+msgid "I import the backup"
+msgstr "J'importe la sauvegarde"
+
+msgid "Select the skin"
+msgstr "Sélectionnez le thème"
+
+msgid "Select your favorite skin."
+msgstr "Sélectionnez votre thème favori."
+
+msgid "Grey"
+msgstr "Gris"
 
 msgid "White"
 msgstr "Blanc"
@@ -30,7 +103,7 @@ msgid "Sand"
 msgstr "Sable"
 
 msgid "Ocher Yellow"
-msgstr "Jaune Ocre"
+msgstr "Jaune ocre"
 
 msgid "Orange"
 msgstr "Orange"
@@ -40,9 +113,6 @@ msgstr "Couleur des menus"
 
 msgid "Color of sub entries"
 msgstr "Couleur du  texte"
-
-msgid "Configuration item colors"
-msgstr "Couleurs des éléments de configuration"
 
 msgid "Select the color of the entries."
 msgstr "Sélectionnez la couleur des menus."
@@ -228,7 +298,7 @@ msgid "Write the IP that you find in the configuration file generated and downlo
 msgstr "Écrivez l’adresse IP que vous trouvez dans le fichier de configuration généré et téléchargé à partir du site Web."
 
 msgid "Connected by: %s"
-msgstr "Connecté par: %s"
+msgstr "Connecté depuis: %s"
 
 msgid "Example:"
 msgstr "Exemple:"
@@ -723,8 +793,8 @@ msgstr "Clé Privée enregistrée avec succès !"
 msgid "Load Private Key"
 msgstr "Charge Clé privée"
 
-msgid "Total servers: %s"
-msgstr "Total serveurs: %s"
+msgid "Total servers: %s%s%s"
+msgstr "Total serveurs: %s%s%s"
 
 msgid "Checking Wireguard module"
 msgstr "Vérification du module Wireguard"
@@ -745,4 +815,4 @@ msgid "The file located in %s is empty."
 msgstr "Le fichier situé dans %s est vide."
 
 msgid "Copy/paste your Private Key and then press the Blue button"
-msgstr "Copier/coller votre Clé privée et âpres appuie sur le bouton Bleu"
+msgstr "Copier/coller votre Clé privée et âpres appuiez sur le bouton Bleu"

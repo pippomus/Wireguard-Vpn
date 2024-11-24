@@ -413,13 +413,19 @@ msgstr ""
 msgid "or"
 msgstr ""
 
+msgid "Ping servers"
+msgstr ""
+
+msgid "Ping all servers"
+msgstr ""
+
 msgid "PERSONAL FILES"
 msgstr ""
 
 msgid "PERFECT! "
 msgstr ""
 
-msgid "Page: %d/%d"
+msgid "Page: %s%s%s"
 msgstr ""
 
 msgid "Play sound"
@@ -492,6 +498,12 @@ msgid "Restart Network"
 msgstr ""
 
 msgid "Result successfully saved in /tmp/speedtest.png"
+msgstr ""
+
+msgid "Server selected"
+msgstr ""
+
+msgid "Select different ping options to show them in the list."
 msgstr ""
 
 msgid "Sand"
@@ -710,7 +722,7 @@ msgstr ""
 msgid "Total files: %s"
 msgstr ""
 
-msgid "Total servers: %d/%d"
+msgid "Total servers: %s%s%s"
 msgstr ""
 
 msgid "Try later or"
