@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: wireguard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-11-17 20:36+0200\n"
+"PO-Revision-Date: 2024-11-24 18:34+0200\n"
 "Last-Translator: Madhouse <anonm4d@gmail.com>\n"
 "Language-Team: giorbak\n"
 "Language: el\n"
@@ -14,23 +14,26 @@ msgstr ""
 "X-Generator: Poedit 3.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
+msgid "NO VPN CONNECTION STARTED!"
+msgstr ""
+
+msgid "Page"
+msgstr "Σελίδα"
+
 msgid "Ping servers"
-msgstr ""
+msgstr "Ping διακομιστών"
 
-msgid "Ping all servers"
-msgstr ""
-
-msgid "Server selected"
-msgstr ""
+msgid "Selected"
+msgstr "Επιλεγμένο"
 
 msgid "Select different ping options to show them in the list."
-msgstr ""
+msgstr "Επιλέξτε διαφορετικές επιλογές ping για να τις εμφανίσετε στη λίστα."
 
 msgid "SKIN, COLORS AND SOUNDS"
 msgstr "ΘΕΜΑ, ΧΡΩΜΑΤΑ ΚΑΙ ΗΧΟΙ"
 
 msgid "Choose a sound"
-msgstr "Επιλέξτε έναν ήχο"
+msgstr "Επιλογή ήχου"
 
 msgid "Play sound in enigma2"
 msgstr "Αναπαραγωγή ήχου στο enigma2"
