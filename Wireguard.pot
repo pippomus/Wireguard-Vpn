@@ -74,12 +74,6 @@ msgstr ""
 msgid "Button"
 msgstr ""
 
-msgid "Search"
-msgstr ""
-
-msgid "Search by country"
-msgstr ""
-
 msgid "Stop"
 msgstr ""
 
@@ -395,9 +389,6 @@ msgstr ""
 msgid "Mullvad account does not exist!"
 msgstr ""
 
-msgid "No results found for '%s'. Try again?"
-msgstr ""
-
 msgid "NETWORK AND INTERNET"
 msgstr ""
 
@@ -489,9 +480,6 @@ msgid "Put the files in %s"
 msgstr ""
 
 msgid "Quick connection"
-msgstr ""
-
-msgid "Reset"
 msgstr ""
 
 msgid "Reboot Network Adapter"
