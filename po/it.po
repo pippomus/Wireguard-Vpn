@@ -60,7 +60,7 @@ msgid "Search"
 msgstr "Cerca"
 
 msgid "Reset"
-msgstr "Resetta"
+msgstr "Reset"
 
 msgid "Search by country"
 msgstr "Cerca per nazioni"
