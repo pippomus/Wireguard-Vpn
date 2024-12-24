@@ -38,10 +38,10 @@ FILE_IPK=$(python -c "import urllib.request; print(urllib.request.urlopen('$RAW_
 case $ARCHITECTURE in
   arm*)
     if [ "$chipset" == "hi3716mv430" ]; then
-    	URL_IPK="https://raw.githubusercontent.com/m4dhouse/Wireguard-Vpn/$BASE_BRANCH/enigma2-plugin-extensions-wireguard-vpn-h82h_${FILE_IPK}_all.ipk"
-	  else
-    	URL_IPK="https://raw.githubusercontent.com/m4dhouse/Wireguard-Vpn/$BASE_BRANCH/enigma2-plugin-extensions-wireguard-vpn_${FILE_IPK}_all.ipk"
-	  fi
+      URL_IPK="https://raw.githubusercontent.com/m4dhouse/Wireguard-Vpn/$BASE_BRANCH/enigma2-plugin-extensions-wireguard-vpn-h82h_${FILE_IPK}_all.ipk"
+    else
+      URL_IPK="https://raw.githubusercontent.com/m4dhouse/Wireguard-Vpn/$BASE_BRANCH/enigma2-plugin-extensions-wireguard-vpn_${FILE_IPK}_all.ipk"
+    fi
     ;;
   mips*)
     URL_IPK="https://raw.githubusercontent.com/m4dhouse/Wireguard-Vpn/$BASE_BRANCH/enigma2-plugin-extensions-wireguard-vpn-mips_${FILE_IPK}_all.ipk"
