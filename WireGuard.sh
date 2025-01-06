@@ -1,6 +1,18 @@
 #!/bin/sh
 # shell created by madhouse
 
+check_internet_connection() {
+  echo "Checking Internet connection..."
+  if ping -c 1 8.8.8.8 >/dev/null 2>&1; then
+    echo "Internet connection is OK."
+  else
+    echo "Error: No Internet connection. Please check your network."
+    exit 1
+  fi
+}
+
+check_internet_connection
+
 PYTHON_VERSION=$(python -c "import sys; print(sys.version_info.minor)")
 ARCHITECTURE=$(uname -m)
 
@@ -25,16 +37,6 @@ get_chipset_info() {
     cat /proc/stb/info/chipset
   else
     echo "unknown"
-  fi
-}
-
-check_internet_connection() {
-  echo "Checking Internet connection..."
-  if ping -c 1 8.8.8.8 >/dev/null 2>&1; then
-    echo "Internet connection is OK."
-  else
-    echo "Error: No Internet connection. Please check your network."
-    exit 1
   fi
 }
 
@@ -77,8 +79,6 @@ case $ARCHITECTURE in
     exit 1
     ;;
 esac
-
-check_internet_connection
 
 install_dependencies
 
