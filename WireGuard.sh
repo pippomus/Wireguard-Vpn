@@ -28,6 +28,16 @@ get_chipset_info() {
   fi
 }
 
+check_internet_connection() {
+  echo "Checking Internet connection..."
+  if ping -c 1 8.8.8.8 >/dev/null 2>&1; then
+    echo "Internet connection is OK."
+  else
+    echo "Error: No Internet connection. Please check your network."
+    exit 1
+  fi
+}
+
 install_dependencies() {
   echo '====================================='
   echo ' Installing necessary dependencies   '
@@ -67,6 +77,8 @@ case $ARCHITECTURE in
     exit 1
     ;;
 esac
+
+check_internet_connection
 
 install_dependencies
 
