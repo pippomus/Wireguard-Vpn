@@ -1,23 +1,21 @@
 #!/bin/sh
 # shell created by madhouse
-PYVERSION=$(python -c "import sys; print(sys.version_info.minor)")
+
+PYTHON_VERSION=$(python -c "import sys; print(sys.version_info.minor)")
 ARCHITECTURE=$(uname -m)
 
-case $PYVERSION in
+case $PYTHON_VERSION in
   13)
     BASE_BRANCH='python-3.13'
     ;;
   12)
     BASE_BRANCH='python-3.12'
     ;;
-  11)
-    BASE_BRANCH='python3'
-    ;;
   9)
     BASE_BRANCH='python-3.9'
     ;;
   *)
-    echo "Unsupported Python version: $PYVERSION"
+    echo "Unsupported Python version: $PYTHON_VERSION"
     exit 1
     ;;
 esac
@@ -30,30 +28,47 @@ get_chipset_info() {
   fi
 }
 
-chipset=$(get_chipset_info)
+install_dependencies() {
+  echo '====================================='
+  echo ' Installing necessary dependencies   '
+  echo '====================================='
+  opkg update
+  opkg install wireguard-tools
+  opkg install wireguard-tools-bash-completion
+  opkg install kernel-module-wireguard
+  opkg install openresolv
+  opkg install alsa-utils
+  opkg install iptables
+  if [ $? -ne 0 ]; then
+    echo "Error: Failed to install dependencies."
+    exit 1
+  fi
+  echo "Dependencies installed successfully."
+}
 
-RAW_URL_IPK="https://raw.githubusercontent.com/m4dhouse/Wireguard-Vpn/$BASE_BRANCH/version"
-FILE_IPK=$(python -c "import urllib.request; print(urllib.request.urlopen('$RAW_URL_IPK').read().decode())")
+CHIPSET=$(get_chipset_info)
+
+RAW_URL_VERSION="https://raw.githubusercontent.com/m4dhouse/Wireguard-Vpn/$BASE_BRANCH/version"
+VERSION=$(python -c "import urllib.request; print(urllib.request.urlopen('$RAW_URL_VERSION').read().decode())")
 
 case $ARCHITECTURE in
   arm*)
-    if [ "$chipset" == "hi3716mv430" ]; then
-      URL_IPK="https://raw.githubusercontent.com/m4dhouse/Wireguard-Vpn/$BASE_BRANCH/enigma2-plugin-extensions-wireguard-vpn-h82h_${FILE_IPK}_all.ipk"
+    if [ "$CHIPSET" == "hi3716mv430" ]; then
+      URL_IPK="https://raw.githubusercontent.com/m4dhouse/Wireguard-Vpn/$BASE_BRANCH/enigma2-plugin-extensions-wireguard-vpn-h82h_${VERSION}_all.ipk"
     else
-      URL_IPK="https://raw.githubusercontent.com/m4dhouse/Wireguard-Vpn/$BASE_BRANCH/enigma2-plugin-extensions-wireguard-vpn_${FILE_IPK}_all.ipk"
+      URL_IPK="https://raw.githubusercontent.com/m4dhouse/Wireguard-Vpn/$BASE_BRANCH/enigma2-plugin-extensions-wireguard-vpn_${VERSION}_all.ipk"
     fi
     ;;
   mips*)
-    URL_IPK="https://raw.githubusercontent.com/m4dhouse/Wireguard-Vpn/$BASE_BRANCH/enigma2-plugin-extensions-wireguard-vpn-mips_${FILE_IPK}_all.ipk"
-    ;;
-  aarch64*)
-    URL_IPK="https://raw.githubusercontent.com/m4dhouse/Wireguard-Vpn/$BASE_BRANCH/enigma2-plugin-extensions-wireguard-vpn-aarch64_${FILE_IPK}_all.ipk"
+    URL_IPK="https://raw.githubusercontent.com/m4dhouse/Wireguard-Vpn/$BASE_BRANCH/enigma2-plugin-extensions-wireguard-vpn-mips_${VERSION}_all.ipk"
     ;;
   *)
     echo "Unsupported architecture: $ARCHITECTURE"
     exit 1
     ;;
 esac
+
+install_dependencies
 
 echo '====================================='
 echo '   I install WireGuard VPN plugin'
