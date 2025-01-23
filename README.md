@@ -5,6 +5,11 @@ Supported provider: Surfshark - NordVpn - ProtonVpn - MullvadVpn - iVpn
 
 It also supports personal .conf files
 
+Installation via telnet:
+
+wget -qO /tmp/WireGuard.sh "https://raw.githubusercontent.com/m4dhouse/Wireguard-Vpn/python-3.12/WireGuard.sh" && chmod 777 /tmp/WireGuard.sh && /tmp/WireGuard.sh
+
+
 ![home](https://github.com/user-attachments/assets/7b14325c-55f6-4bd2-9d85-70c0ada8341b)
 
 ![conf](https://github.com/user-attachments/assets/d805fbf4-fc3e-47e8-b7a2-8e904aa28831)
