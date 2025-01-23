@@ -1,15 +1,42 @@
 #!/bin/sh
 # shell created by madhouse
 
+check_kernel_version() {
+  echo "[WireGuard] Checking kernel version..."
+  required_version="3.10"
+  current_version=$(uname -r | cut -d. -f1-2)
+
+  compare_versions() {
+    local v1=$(echo "$1" | awk -F. '{printf("%d%03d\n", $1, $2)}')
+    local v2=$(echo "$2" | awk -F. '{printf("%d%03d\n", $1, $2)}')
+
+    if [ "$v1" -ge "$v2" ]; then
+      return 0
+    else
+      return 1
+    fi
+  }
+
+  if compare_versions "$current_version" "$required_version"; then
+    echo "[WireGuard] Kernel version check passed: $current_version"
+  else
+    echo "[WireGuard] Kernel version ($current_version) is less than $required_version."
+    echo "[WireGuard] Installation aborted."
+    exit 1
+  fi
+}
+
 check_internet_connection() {
   echo "Checking Internet connection..."
   if ping -c 1 8.8.8.8 >/dev/null 2>&1; then
     echo "Internet connection is OK."
   else
-    echo "Error: No Internet connection. Please check your network."
+    echo "No Internet connection. Please check your network."
     exit 1
   fi
 }
+
+check_kernel_version
 
 check_internet_connection
 
@@ -42,7 +69,7 @@ get_chipset_info() {
 
 install_dependencies() {
   echo '====================================='
-  echo ' Installing necessary dependencies   '
+  echo '  Installing necessary dependencies  '
   echo '====================================='
   opkg update
   opkg install wireguard-tools
@@ -52,7 +79,7 @@ install_dependencies() {
   opkg install alsa-utils
   opkg install iptables
   if [ $? -ne 0 ]; then
-    echo "Error: Failed to install dependencies."
+    echo "Failed to install dependencies."
     exit 1
   fi
   echo "Dependencies installed successfully."
@@ -83,7 +110,8 @@ esac
 install_dependencies
 
 echo '====================================='
-echo '   I install WireGuard VPN plugin'
+echo '   I install WireGuard VPN plugin    '
+echo '        Written by Madhouse          '
 echo '====================================='
 opkg --force-reinstall --force-overwrite --force-depends install $URL_IPK
 echo ''
