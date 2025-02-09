@@ -40,7 +40,7 @@ check_kernel_version
 
 check_internet_connection
 
-PYTHON_VERSION=$(python -c "import sys; print(sys.version_info.minor)")
+PYTHON_VERSION=$(python3 -c "import sys; print(sys.version_info.minor)")
 ARCHITECTURE=$(uname -m)
 
 case $PYTHON_VERSION in
@@ -88,7 +88,7 @@ install_dependencies() {
 CHIPSET=$(get_chipset_info)
 
 RAW_URL_VERSION="https://raw.githubusercontent.com/m4dhouse/Wireguard-Vpn/$BASE_BRANCH/version"
-VERSION=$(python -c "import urllib.request; print(urllib.request.urlopen('$RAW_URL_VERSION').read().decode())")
+VERSION=$(python3 -c "import urllib.request; print(urllib.request.urlopen('$RAW_URL_VERSION').read().decode())")
 
 case $ARCHITECTURE in
   arm*)
