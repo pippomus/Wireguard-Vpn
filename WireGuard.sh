@@ -107,7 +107,12 @@ case $ARCHITECTURE in
     ;;
 esac
 
-install_dependencies
+BOXIMAGE=$(awk '{ print $2 }' /etc/opkg/all-feed.conf | cut -d'-' -f1)
+SUPPORTED_IMAGES=("egami" "openatv" "openvix" "openbh" "openhdf" "pure2" "opendroid" "openspa")
+
+if [[ " ${SUPPORTED_IMAGES[@]} " =~ " ${BOXIMAGE} " ]]; then
+  install_dependencies
+fi
 
 echo '====================================='
 echo '   I install WireGuard VPN plugin    '
