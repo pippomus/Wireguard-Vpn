@@ -107,10 +107,10 @@ case $ARCHITECTURE in
     ;;
 esac
 
-BOXIMAGE=$(awk '{ print $2 }' /etc/opkg/all-feed.conf | cut -d'-' -f1)
-SUPPORTED_IMAGES=("egami" "openatv" "openvix" "openbh" "openhdf" "pure2" "opendroid" "openspa")
+DISTRO_FEED=$(awk '{ print $2 }' /etc/opkg/all-feed.conf | cut -d'-' -f1)
+SUPPORTED_DISTRO=("egami" "openatv" "openvix" "openbh" "openhdf" "pure2" "opendroid" "openspa")
 
-if [[ " ${SUPPORTED_IMAGES[@]} " =~ " ${BOXIMAGE} " ]]; then
+if [[ " ${SUPPORTED_DISTRO[@]} " =~ " ${DISTRO_FEED} " ]]; then
   install_dependencies
 fi
 
