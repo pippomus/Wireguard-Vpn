@@ -101,6 +101,9 @@ case $ARCHITECTURE in
   mips*)
     URL_IPK="https://raw.githubusercontent.com/m4dhouse/Wireguard-Vpn/$BASE_BRANCH/enigma2-plugin-extensions-wireguard-vpn-mips_${VERSION}_all.ipk"
     ;;
+  aarch*)
+    URL_IPK="https://raw.githubusercontent.com/m4dhouse/Wireguard-Vpn/$BASE_BRANCH/enigma2-plugin-extensions-wireguard-vpn-aarch64_${VERSION}_all.ipk"
+    ;;
   *)
     echo "Unsupported architecture: $ARCHITECTURE"
     exit 1
